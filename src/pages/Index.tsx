@@ -285,6 +285,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="flex-1 text-xl px-8 py-7 bg-gradient-to-r from-accent via-secondary to-primary hover:opacity-90 hover-scale font-bold"
+                  onClick={() => window.open('https://1wyvrz.life/casino/list?open=register', '_blank')}
                 >
                   <Icon name="Gamepad2" size={24} className="mr-2" />
                   Mellstroy Games
