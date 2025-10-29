@@ -277,7 +277,7 @@ const Index = () => {
                 <Button 
                   size="lg" 
                   className="flex-1 text-xl px-8 py-7 bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90 hover-scale font-bold"
-                  onClick={() => window.open('https://www.youtube.com/watch?v=zCPyygJ-7E0&t=29s', '_blank')}
+                  onClick={() => window.open('https://1wyvrz.life/casino/list?open=register', '_blank')}
                 >
                   <Icon name="ExternalLink" size={24} className="mr-2" />
                   1WIN - Регистрация
