@@ -243,7 +243,37 @@ const Index = () => {
                   <p className="text-foreground/70">Получи бонус и выигрывай</p>
                 </div>
               </div>
-              <div className="flex flex-col sm:flex-row gap-4 pt-6">
+              
+              <Card className="border-2 border-accent bg-gradient-to-r from-accent/20 to-primary/20 backdrop-blur">
+                <CardContent className="p-6">
+                  <div className="flex flex-col md:flex-row items-center justify-between gap-4">
+                    <div className="text-center md:text-left">
+                      <Badge className="bg-accent text-accent-foreground mb-3">
+                        🎁 ЭКСКЛЮЗИВНЫЙ ПРОМОКОД
+                      </Badge>
+                      <h3 className="text-2xl font-black mb-2">До 500% к депозиту</h3>
+                      <p className="text-foreground/70">Используй промокод при регистрации</p>
+                    </div>
+                    <div className="flex items-center gap-3 bg-background/50 backdrop-blur px-6 py-4 rounded-xl border-2 border-accent">
+                      <code className="text-3xl font-black tracking-wider bg-gradient-to-r from-primary via-secondary to-accent bg-clip-text text-transparent">
+                        TOK07
+                      </code>
+                      <Button
+                        size="sm"
+                        variant="outline"
+                        className="hover-scale"
+                        onClick={() => {
+                          navigator.clipboard.writeText('TOK07');
+                        }}
+                      >
+                        <Icon name="Copy" size={20} />
+                      </Button>
+                    </div>
+                  </div>
+                </CardContent>
+              </Card>
+
+              <div className="flex flex-col sm:flex-row gap-4">
                 <Button 
                   size="lg" 
                   className="flex-1 text-xl px-8 py-7 bg-gradient-to-r from-primary via-secondary to-accent hover:opacity-90 hover-scale font-bold"
