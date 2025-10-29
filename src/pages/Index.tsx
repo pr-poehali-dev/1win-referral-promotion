@@ -3,10 +3,21 @@ import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/com
 import { Accordion, AccordionContent, AccordionItem, AccordionTrigger } from "@/components/ui/accordion";
 import { Badge } from "@/components/ui/badge";
 import Icon from "@/components/ui/icon";
+import { useToast } from "@/hooks/use-toast";
 
 const Index = () => {
+  const { toast } = useToast();
+
   const scrollToSection = (id: string) => {
     document.getElementById(id)?.scrollIntoView({ behavior: 'smooth' });
+  };
+
+  const copyPromoCode = () => {
+    navigator.clipboard.writeText('TOK07');
+    toast({
+      title: "Промокод скопирован! 🎉",
+      description: "TOK07 готов к использованию",
+    });
   };
 
   const bonuses = [
@@ -262,9 +273,7 @@ const Index = () => {
                         size="sm"
                         variant="outline"
                         className="hover-scale"
-                        onClick={() => {
-                          navigator.clipboard.writeText('TOK07');
-                        }}
+                        onClick={copyPromoCode}
                       >
                         <Icon name="Copy" size={20} />
                       </Button>
